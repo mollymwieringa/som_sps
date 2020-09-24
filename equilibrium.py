@@ -13,6 +13,11 @@ def find_equilibrium(volume, key):
                 temp.append(i)
                 ind = temp[0]
                 
+        elif key == 'atmSOMperturb':
+            if (abs(percent[i])+abs(percent[i+1])+abs(percent[i+2])+abs(percent[i-1])+abs(percent[i-2]))/5 < 2:
+                temp.append(i)
+                ind = temp[0]
+                
         elif key[0] =='a':
             if (abs(percent[i])+abs(percent[i+1])+abs(percent[i+2])+abs(percent[i-1])+abs(percent[i-2]))/5 < 1:
                 temp.append(i)
